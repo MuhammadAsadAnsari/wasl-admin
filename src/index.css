@@ -1,0 +1,454 @@
+:root {
+    --header-height: 3rem;
+    --nav-width: 4.25rem;
+    --first-color: #092a85;
+    --body-color: #f3f5fa;
+    --grey-color: #637381;
+    --purple-color: #8069f2;
+    --light-color: #EEEEEE;
+    --green-color: #00ab55;
+    --light-blue-color: #D6E5FA;
+    --yellow-color: #fcd53b;
+    --blue-color: #265df1;
+    --red-color: #ef5b5b;
+    --body-font: "Nunito", sans-serif;
+    --normal-font-size: 1rem;
+    --z-fixed: 100;
+  }
+  
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+  
+
+/*Shahood CSS*/
+body{
+  background-color: #f0f2f5 !important;
+}
+
+main.add_body_padding{margin-left: 40px;}
+
+.form-signin {
+  background: #163554!important;  /*linear-gradient(195deg, #42424a, #191919);*/
+}
+h1.welcome-txt{
+  color: #fff;
+}
+.propertydetails .ant-statistic-title{
+  color: #4d4141 !important;
+}
+.logo_area{
+  background : white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+button.frm-login-btn{
+  background: #cf892c  ;/*linear-gradient(195deg, #49a3f1, #1A73E8);*/
+  border-radius: 23rem;
+  border-color: #cf892c;
+  transition: 0.95s all ease;
+}
+button.ant-btn-primary{
+  background: #163554    !important;
+}
+.proxies_detail .ant-statistic-title {
+  text-align: center;
+  font-size: 17px !important;
+
+}
+.assignbutton {
+  margin-right: 5px;
+}
+.buying-datepicker{
+  width: 100%;
+}
+.buying-form-col{
+  margin: 0px auto 0px auto;
+}
+.reload-buying {
+  margin-top: -20px !important;
+}
+.date_selection .ant-form-item-control-input-content {
+  display: flex;
+}
+.analytics_main_row .ant-row{
+  justify-content: space-around !important;
+}
+.analytic-counts {
+  text-align: center;
+}
+.analytics_count_row {
+  margin: 15px 0px;
+}
+button.frm-login-btn:hover{
+  /* background-color: #191919;
+  background: linear-gradient(195deg, #42424a, #191919);
+  border-color: #191919; */
+  transition: 0.95s all ease;
+}
+.buying-submit{
+  text-align: center;
+}
+.buying-submitbtn{
+  width: 60%;
+
+}
+.chat-content{
+  padding-top: 0px !important;
+}
+.ant-btn-default{
+  color : white !important;
+  background-color:  #f23064 !important;
+  border-color:   #f23064 !important;
+}
+.buying-export-todays-btn{
+  width: 48%;
+  margin-left: 2px;
+}
+
+header{
+  width: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+    box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(255, 255, 255, 0.9), 0rem 1.25rem 1.6875rem 0rem rgba(0, 0, 0, 0.05);
+    -webkit-backdrop-filter: saturate(200%) blur(1.875rem);
+    backdrop-filter: saturate(200%) blur(1.875rem);
+    background-color: #fff !important;
+    /* top: 0.75rem !important; */
+    margin-right: 0px;
+    height: 80px !important;
+    /* border-radius: 5px; */
+}
+
+aside#admin-dash-nav{
+  /* background-color: #EDC6B1; */
+  /* background: #173551; */
+  background: #ffffff;
+  /* margin: 12px; */
+  padding: 12px;
+  height: auto;
+  /* border-radius: 5px; */
+}
+
+.sidebar a.nav_link{
+  /* color: #0046ad; */
+  color: white;
+  font-weight: 700;
+    padding: 0.8rem 0 0.8rem 1rem;
+    font-size: 15px;
+    border-bottom: none;
+    background-color: transparent;
+    margin-bottom: 0.2rem;
+    transition: 0.85s all ease;
+}
+
+.sidebar a.nav_link span.nav_name{
+  font-weight: 500;
+}
+
+.sidebar a span :hover{
+  color: #fff;
+  background-color: red;
+}
+
+.sidebar a.nav_link.active{
+  color: rgb(110 101 101);
+  font-weight: 700;
+  padding: 0.8rem 0 0.8rem 1rem;
+  border-bottom: none;
+  /* background: #cf892c; */
+  /* border-radius: 0.375rem; */
+}
+span.pageName {
+  position: absolute;
+  margin-left: 15px;
+}
+.sidebar a.nav_link.active span.nav_name{
+  font-weight: 700;
+}
+
+li i.nav_icon {
+  color: white;
+}
+
+.dt_action_btns{
+  height: 42px !important;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  line-height: 10px;
+}
+
+.sidebar a.nav_link:hover{
+  -webkit-transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,background-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,background-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  background-color: #cf892c;
+  /* border-radius: 0.375rem; */
+}
+
+main{
+  padding-top: 3rem !important;
+}
+
+.mybadge {
+  padding: 7px 10px 31px 20px;
+  font-size: 18px;
+  top: 75px !important;
+}
+
+.custombutton{
+  padding: 7.428571px 36px!important;
+}
+
+.accountdetails{
+
+    margin-left: 15px !important;
+}
+
+button.ant-btn-lg, button.ant-btn-primary{
+  background: linear-gradient(195deg, #49a3f1, #1A73E8);
+  border-radius: 0.375rem;
+  padding: 6.428571428571429px 20px;
+  margin-bottom: 18px;
+}
+
+@media screen and (max-width: 1680px){
+header {width: 80.7% !important;}
+aside#admin-dash-nav {
+  height: 714px;
+}
+}
+
+@media screen and (max-width: 1536px){
+header {width: 100% !important;}
+
+}
+
+@media screen and (max-width: 1440px){
+header {width: 100% !important;} 
+
+}
+
+@media screen and (max-width: 1366px){
+header {width: 100% !important;}
+.refresh_btn{
+  margin: 0px 50px;
+}
+}
+
+@media screen and (max-width: 1280px){
+header {width: 100% !important;} 
+}
+
+@media screen and (max-width: 1200px){
+header {width: 100% !important;}
+}
+
+@media screen and (max-width: 1024px){
+header {width: 100% !important;}
+}
+
+/* responsive css */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  /* Styles for large devices go here */
+}
+
+@media screen and (min-width: 1201px) {
+
+  .custombutton{
+    margin-left: -48px !important;
+  }
+  /* Styles for extra large devices go here */
+}
+
+/**/
+
+
+
+
+
+  body {
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    padding: 0 1rem;
+    font-family: var(--body-font);
+    color: var(--grey-color);
+    font-size: var(--normal-font-size);
+    transition: 0.5s;
+    background-color: var(--body-color);
+    /* background-image: linear-gradient(to right, rgba(45, 203, 247, 0.8), rgba(0, 72, 255, 0.8));; */
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  button {
+    outline: 0 !important;
+  }
+  .ptb-100 {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+  .pt-100 {
+    padding-top: 6.25rem;
+  }
+  .pt-200 {
+    padding-top: 12.5rem;
+  }
+  .pb-100 {
+    padding-bottom: 6.25rem;
+  }
+  .pb-70 {
+    padding-bottom: 4.4rem;
+  }
+  
+  
+  
+  aside#admin-dash-nav {
+    /* background: #1595d8; */
+    color: white;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+span.nav_logo-name {
+    color: white;
+    font-size: 30px;
+}
+
+.checkAccount {
+  background: linear-gradient(195deg, #49a3f1, #1A73E8);
+  color: white;
+}
+.custom-table-container table {
+  font-family: monospace;
+}
+
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.add-user-modal{
+  width: 670px !important;
+}
+.loader {
+  /* Add your loader styles here */
+}
+
+/* 
+ ////// muaz css ///// */
+
+/* .buyingcount {
+  padding: 5px 80px 5px 80px;
+  border-radius: 80px;
+  margin-right: 15px;
+}
+
+.buyingratio {
+  border-radius: 80px;
+  margin-right: 15px;
+  padding: 22px 80px 22px 80px !important;
+}
+
+.buyingcount .ant-card-body {
+  padding: 18px !important;
+}
+
+.buyingratio .ant-card-body {
+  padding: 0px !important;
+}
+
+.buyingratio .ant-statistic-title {
+  text-align: center;
+}
+
+.buying {
+  padding-left: 200px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.buyingcolumn {
+  padding: 102px;
+  position: relative;
+  bottom: 30px;
+}
+
+.viewborder {
+  padding: 185px;
+  position: relative;
+  bottom: 40px;
+  top: -130px;
+}
+
+.date {
+  margin-left: 98px;
+}
+
+.dateforall {
+  margin-left: 65px;
+  padding-top: 10px;
+}
+
+.lastcheck {
+  color: rgb(20, 55, 96);
+  padding-left: 80px;
+  text-align: center;
+}
+
+.chartSetting-col {
+  margin-left: 128px;
+}
+
+.check {
+  padding-left: 300px;
+  text-align: center;
+} */
+/*
+//// muaz css end  ////// */
+.chat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.name-time {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.time {
+  color: gray;
+  margin-left: 36px; 
+}
+
+.last-message {
+  font-size: 14px;
+  color: gray;
+}
