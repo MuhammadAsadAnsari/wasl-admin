@@ -160,13 +160,13 @@
     <Title style={{paddingTop : "5px"}} level={4}>Moiz Adamjee</Title>
     </div>
             <Divider />
-            <div className="nav_list">
+            {/* <div className="nav_list">
               <Dropdown overlay={menu} trigger={['click']}>
                 <NavLink to="#" className="nav_link">
               <UserAddOutlined /> <span className="nav_name">App Users <CaretDownOutlined className='dropdown-icon'/></span>
                 </NavLink>
               </Dropdown>
-            </div>
+            </div> */}
             <div className="nav_list">
               <Dropdown overlay={proxiesMenu} trigger={['click']} >
                 <NavLink to="#" className="nav_link">

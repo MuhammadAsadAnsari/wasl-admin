@@ -5,7 +5,7 @@ import { axiosPublic } from './axios/axiosPublic';
 async function getAllCategories() {
     try {
 
-        const response = await axios.get(`${baseURL}/categories`);
+        const response = await axios.get(`${baseURL}/categories/admin`);
         if (response.data) {
            return  Promise.resolve(response)
         }
