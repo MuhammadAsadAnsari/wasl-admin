@@ -73,34 +73,18 @@ const AddAppUser = ({ show, setShow, refresh,totalUsers,activeUsers,blockUsers }
        let obj = {
         "personal_info": {
           "name": values.user_name,
-          "emirtates_id": values.emirtates_id,
-          "passport_no":values.passport_no,
-          "passport_expiry": values.passport_expiry,
-          "residence_visa": values.residence_visa,
-          "visa_expiry": values.visa_expiry,
-          "nationality": values.nationality
+          "serviceType": values.serviceType,
+          "cnic":values.cnic,
+          "phoneNumber": values.phoneNumber,
+          "role": "serviceProvider"
         },
         "preferences": {
           "preferred_language": values.preferred_language,
-          "contact_mode": values.contact_mode
         },
-        "residence_info" : {
-          "floor" : values.floor,
-          "flat_no" : values.flat_no,
-          "building_name" : values.building_name
-        },
+        
         "contact_info": {
-          "primary_address": values.primary_address,
-          "secondary_address": values.secondary_address,
+          "address": values.address,
           "city": values.city,
-          "po_box": values.po_box,
-          "mobile_no": values.mobile_no,
-          "email": values.email,
-          "home_ph_no": values.home_ph_no,
-          "office_ph_no": values.office_ph_no,
-          "fax": values.fax,
-          "attendent_no": values.attendent_no,
-          "attendent_name": values.attendent_name
         }
       }
       let result = await addUser(obj);
@@ -125,12 +109,7 @@ const AddAppUser = ({ show, setShow, refresh,totalUsers,activeUsers,blockUsers }
             return {
               id: item._id,
             name: item.personal_info.name,
-            mobile_no: item.contact_info.mobile_no,
             email: item.contact_info.email,
-            home_ph_no: item.contact_info.home_ph_no,
-            office_ph_no: item.contact_info.office_ph_no,
-            attendent_no: item.contact_info.attendent_no,
-            attendent_name: item.contact_info.attendent_name,
             };
         });
         refresh(filteredData);
@@ -186,7 +165,7 @@ const getMoreInfo = async () => {
       {loading && <Loader />}
       <Modal
       className='add-user-modal'
-        title="Add User"
+        title="Add Service Providers"
         visible={show}
         onCancel={handleCancel}
         footer={[
@@ -211,93 +190,35 @@ const getMoreInfo = async () => {
           <Form.Item label="Full Name" name="user_name">
             <Input />
           </Form.Item>
-          <Form.Item label="Nationality" name="nationality">
+          <Form.Item label="Phone Number" name="phoneNumber">
             <Input />
           </Form.Item>
-          <Form.Item label="Emirtates Id" name="emirtates_id">
-            <Input />
-          </Form.Item>
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Form.Item label="Passport No" name="passport_no" style={{marginRight : '5px'}}>
-            <Input />
-          </Form.Item>
-          <Form.Item label="Passport Expiry" name="passport_expiry"  style={{marginLeft : '5px'}} >
-            <Input/>
-          </Form.Item>
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'center'  }}>
-          <Form.Item label="Residence Visa" name="residence_visa" style={{marginRight : '5px'}}>
-            <Input />
-          </Form.Item>
-          <Form.Item label="Visa Expiry" name="visa_expiry" style={{marginLeft : '5px'}} >
+          <Form.Item label="Service Type" name="serviceType">
             <Input />
           </Form.Item>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Form.Item label="Preferred Language" name="preferred_language" style={{marginRight : '5px'}}>
+          <Form.Item label="National ID" name="cnic" style={{marginRight : '5px'}}>
             <Input />
           </Form.Item>
-          <Form.Item label="Contact Mode" name="contact_mode" style={{marginLeft : '5px'}}>
-            <Input/>
-          </Form.Item>
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-          <Form.Item label="Primary Address" name="primary_address">
-            <Input />
-          </Form.Item>
-          <Form.Item label="Secondary Address" name="secondary_address">
+        <Form.Item label="Preferred Language" name="preferred_language" style={{marginRight : '5px'}}>
             <Input />
           </Form.Item>
           <Form.Item label="city" name="city">
             <Input />
           </Form.Item>
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-          <Form.Item label="PO Box" name="po_box">
-            <Input />
-          </Form.Item>
-          <Form.Item label="Mobile No" name="mobile_no" >
-            <Input/>
-          </Form.Item>
-          <Form.Item label="Email"  name="email">
-            <Input  />
-          </Form.Item>
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-          <Form.Item label="Home Ph No" name="home_ph_no">
-            <Input />
-          </Form.Item>
-          <Form.Item label="Office Ph No" name="office_ph_no">
-            <Input />
-          </Form.Item>
-          <Form.Item label="Fax" name="fax">
-            <Input />
-          </Form.Item>
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Form.Item label="Attendent No" name="attendent_no" style={{marginRight : '5px'}}>
-            <Input />
-          </Form.Item>
-          <Form.Item label="Attendent Name" name="attendent_name" style={{marginLeft : '5px'}} >
-            <Input/>
-          </Form.Item>
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-          <Form.Item label="Floor No" name="floor">
-            <Input />
-          </Form.Item>
-          <Form.Item label="Flat No" name="flat_no">
-            <Input />
-          </Form.Item>
-          <Form.Item label="Building Name" name="building_name">
-            <Input />
-          </Form.Item>
-          </div>
-          {/* <Form.Item label="App Password" name="password">
-            <Input />
-          </Form.Item> */}
 
+          </div>
+       
+          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+        
+          <Form.Item label="Address" name="address">
+            <Input />
+          </Form.Item>
+          
+          </div>
+          
+         
 
         </Form>
       </Modal>

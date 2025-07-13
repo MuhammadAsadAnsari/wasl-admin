@@ -35,7 +35,7 @@ export default function Router() {
       ...(Auth() && {
         children: [
           { path: "/", element: <Dashboard /> },
-          { path: "users", element: <Users /> },
+          { path: "serviceProviders", element: <Users /> },
           { path: "requests", element: <ERequests /> },
           { path: "category", element: <Categories /> },
           { path: "subcategory", element: <SubCategory /> },

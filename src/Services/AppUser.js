@@ -21,7 +21,7 @@ async function getAllUsers() {
 
 async function addUser(user) {
     try {
-        const response = await axios.post(`${baseURL}/appuser`, user);
+        const response = await axios.post(`${baseURL}/auth/add-providers`, user);
         if (response.status === 200) {
             return Promise.resolve(response)
         }

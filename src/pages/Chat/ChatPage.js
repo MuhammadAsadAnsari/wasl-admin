@@ -96,6 +96,7 @@ const ChatPage = () => {
         {
           text: data.message,
           sender: String(data.from) === admin_id ? "admin" : "user",
+          images:data.images
         },
       ];
       setMessages((prevMessages) => [...prevMessages, ...formattedMessages]);
@@ -110,6 +111,7 @@ const ChatPage = () => {
         const formattedUserMessages = userMessages.data.data.map((msg) => ({
           text: msg.message,
           sender: String(msg.from) === admin_id ? "admin" : "user",
+          images:msg.images
         }));
         setMessages((prevMessages) => [
           ...prevMessages,
@@ -178,11 +180,38 @@ const ChatPage = () => {
     }
   };
 
-  const renderMessage = ({ text, sender }) => (
-    <List.Item style={{ textAlign: sender === "admin" ? "right" : "left" }}>
-      <List.Item.Meta title={<span style={{ color: sender === "admin" ? "#1890ff" : "#333" }}>{text}</span>} />
-    </List.Item>
-  );
+ const renderMessage = ({ text, sender, images = [] }) => (
+  <List.Item style={{ textAlign: sender === "admin" ? "right" : "left" }}>
+    <List.Item.Meta
+      title={
+        <div>
+          {text && (
+            <span style={{ color: sender === "admin" ? "#1890ff" : "#333" }}>
+              {text}
+            </span>
+          )}
+          {images && images.length > 0 && (
+            <div style={{ marginTop: 8 }}>
+              {images.map((img, index) => (
+                <img
+                  key={index}
+                  src={`${baseURL}/uploads/${img}`}
+                  alt={`message-img-${index}`}
+                  style={{
+                    maxWidth: 200,
+                    margin: "4px 4px 0 0",
+                    borderRadius: 8,
+                    border: "1px solid #ddd"
+                  }}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      }
+    />
+  </List.Item>
+);
 
   const renderChatDetails = () => {
     if (selectedChat) {

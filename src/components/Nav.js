@@ -20,9 +20,9 @@
 
   const links = [
       {
-          url: "users",
+          url: "serviceProviders",
           i_class: "bx bx bx-user",
-          link_title: "Users",
+          link_title: "Service Providers",
           key: 3
       }
   ]
@@ -157,16 +157,16 @@
       
       src="https://avatar.iran.liara.run/public/boy?username=Ash"
     />
-    <Title style={{paddingTop : "5px"}} level={4}>Moiz Adamjee</Title>
+    <Title style={{paddingTop : "5px"}} level={4}>Admin</Title>
     </div>
             <Divider />
-            {/* <div className="nav_list">
+            <div className="nav_list">
               <Dropdown overlay={menu} trigger={['click']}>
                 <NavLink to="#" className="nav_link">
-              <UserAddOutlined /> <span className="nav_name">App Users <CaretDownOutlined className='dropdown-icon'/></span>
+              <UserAddOutlined /> <span className="nav_name">Service Providers <CaretDownOutlined className='dropdown-icon'/></span>
                 </NavLink>
               </Dropdown>
-            </div> */}
+            </div>
             <div className="nav_list">
               <Dropdown overlay={proxiesMenu} trigger={['click']} >
                 <NavLink to="#" className="nav_link">

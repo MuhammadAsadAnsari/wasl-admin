@@ -205,14 +205,14 @@ const Users = () => {
       if (users.data) {
         const filteredData = users.data.map((item) => {
           return {
-            id: item._id,
-            name: item.personal_info.name,
-            mobile_no: item.contact_info.mobile_no,
-            email: item.contact_info.email,
-            home_ph_no: item.contact_info.home_ph_no,
-            office_ph_no: item.contact_info.office_ph_no,
-            attendent_no: item.contact_info.attendent_no,
-            attendent_name: item.contact_info.attendent_name,
+            id: item?._id,
+            name: item?.personal_info?.name,
+            phoneNumber: item?.personal_info?.phoneNumber,
+            serviceType: item?.personal_info?.serviceType,
+            cnic: item?.personal_info?.cnic,
+            language: item?.preferences?.preferred_language,
+            city: item?.contact_info?.city,
+            address: item?.contact_info?.address,
           };
         });
         setUsers(filteredData);
@@ -289,58 +289,58 @@ const Users = () => {
       sortDirections: ["descend", "ascend"],
     },
     {
-      title: "Mobile No",
-      dataIndex: "mobile_no",
-      key: "mobile_no",
+      title: "Phone No",
+      dataIndex: "phoneNumber",
+      key: "phoneNumber",
       width: "8%",
-      ...getColumnSearchProps("mobile_no"),
-      sorter: (a, b) => a.mobile_no.length - b.mobile_no.length,
+      ...getColumnSearchProps("phoneNumber"),
+      sorter: (a, b) => a.phoneNumber.length - b.phoneNumber.length,
       sortDirections: ["descend", "ascend"],
     },
     {
-      title: "Email",
-      dataIndex: "email",
-      key: "email",
+      title: "Service Type",
+      dataIndex: "serviceType",
+      key: "serviceType",
       width: "6%",
-      ...getColumnSearchProps("email"),
-      sorter: (a, b) => a.email.length - b.email.length,
+      ...getColumnSearchProps("serviceType"),
+      sorter: (a, b) => a.serviceType.length - b.serviceType.length,
       sortDirections: ["descend", "ascend"],
     },
 
     {
-      title: "Home Ph No",
-      dataIndex: "home_ph_no",
-      key: "home_ph_no",
+      title: "National ID",
+      dataIndex: "cnic",
+      key: "cnic",
+      width: "15%",
+      ...getColumnSearchProps("cnic"),
+      sorter: (a, b) => a.cnic.length - b.cnic.length,
+      sortDirections: ["descend", "ascend"],
+    },
+    {
+      title: "Language",
+      dataIndex: "language",
+      key: "language",
       width: "9%",
-      ...getColumnSearchProps("home_ph_no"),
-      sorter: (a, b) => a.home_ph_no.length - b.home_ph_no.length,
+      ...getColumnSearchProps("language"),
+      sorter: (a, b) => a.language.length - b.language.length,
       sortDirections: ["descend", "ascend"],
     },
     {
-      title: "Office Ph No",
-      dataIndex: "office_ph_no",
-      key: "office_ph_no",
-      width: "9%",
-      ...getColumnSearchProps("office_ph_no"),
-      sorter: (a, b) => a.office_ph_no.length - b.office_ph_no.length,
-      sortDirections: ["descend", "ascend"],
-    },
-    {
-      title: "Attendent No",
-      dataIndex: "attendent_no",
-      key: "attendent_no",
+      title: "City",
+      dataIndex: "city",
+      key: "city",
       width: "8%",
-      ...getColumnSearchProps("attendent_no"),
-      sorter: (a, b) => a.attendent_no.length - b.attendent_no.length,
+      ...getColumnSearchProps("city"),
+      sorter: (a, b) => a.city.length - b.city.length,
       sortDirections: ["descend", "ascend"],
     },
     {
-      title: "Attendent Name",
-      dataIndex: "attendent_name",
-      key: "attendent_name",
+      title: "Address",
+      dataIndex: "address",
+      key: "address",
       width: "8%",
-      ...getColumnSearchProps("attendent_name"),
-      sorter: (a, b) => a.attendent_name.length - b.attendent_name.length,
+      ...getColumnSearchProps("address"),
+      sorter: (a, b) => a.address.length - b.address.length,
       sortDirections: ["descend", "ascend"],
     },
     {
@@ -450,7 +450,7 @@ const Users = () => {
               onClick={showAddModal}
               className="custombutton"
             >
-              + Add New User
+              + Add New  Providers
             </Button>
           </Col>
           {/* <Col span={2}>

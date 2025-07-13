@@ -77,7 +77,7 @@ function Dashboard() {
               }}
             />
           }
-          title={"Users"}
+          title={"Service Providers"}
           value={accountsCount}
         />
         <DashboardCard
