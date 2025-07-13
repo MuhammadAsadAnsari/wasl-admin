@@ -181,13 +181,7 @@
                 </NavLink>
               </Dropdown>
             </div>
-            <div className="nav_list">
-              <Dropdown overlay={VisitorsMenu} trigger={['click']} >
-                <NavLink to="#" className="nav_link">
-                <UsergroupAddOutlined /> <span className="nav_name">Clients <CaretDownOutlined className='dropdown-icon'/></span>
-                </NavLink>
-              </Dropdown>
-            </div>
+           
           </div>
         </nav>
       </aside>
