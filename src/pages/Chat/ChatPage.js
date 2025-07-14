@@ -138,10 +138,10 @@ const ChatPage = () => {
   useEffect(() => {
     const handleServerResponse = (data) => {
       if (data.success) {
-        setMessages((prevMessages) => [
-          ...prevMessages,
-          { text: newMessage, sender: "admin" },
-        ]);
+        // setMessages((prevMessages) => [
+        //   ...prevMessages,
+        //   { text: newMessage, sender: "admin" },
+        // ]);
         setNewMessage("");
       } else {
         console.error("Message failed to send:", data.error);
